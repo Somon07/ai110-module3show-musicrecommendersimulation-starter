@@ -99,25 +99,20 @@ Top 5 picks for genre=pop, mood=happy, energy=0.8
 
 ## Experiments You Tried
 
-Use this section to document the experiments you ran. For example:
-
-- What happened when you changed the weight on genre from 2.0 to 0.5
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
+- I doubled the energy weight and halved the genre weight. Rooftop Lights moved from #3 to #2. The results felt more like a "vibe" match but I reverted it.
+- I ran six user profiles, three realistic and three tricky. Realistic ones matched my intuition.
+- The tricky "Unknown Tastes" profile still returned a full top 5, ranked only by energy.
 
 ---
 
 ## Limitations and Risks
 
-Summarize some limitations of your recommender.
+- It only works on a tiny 10-song catalog.
+- The dataset is pop-heavy, so the same songs keep showing up for different users.
+- It does not understand lyrics or language.
+- It never says "no match" — it fills the list with filler instead.
 
-Examples:
 
-- It only works on a tiny catalog
-- It does not understand lyrics or language
-- It might over favor one genre or mood
-
-You will go deeper on this in your model card.
 
 ---
 
@@ -127,10 +122,14 @@ Read and complete `model_card.md`:
 
 [**Model Card**](model_card.md)
 
-Write 1 to 2 paragraphs here about what you learned:
+A recommender is really just math and sorting. It gives each song points for how
+well it matches the user, then ranks them high to low — there is no real
+understanding of music.
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+I also saw how bias creeps in. My catalog was pop-heavy, so pop songs kept winning
+even for users who did not ask for them. Real apps have the same problem: popular
+songs get shown more just because they are common, which pushes smaller artists out
+of view.
 
 
 
