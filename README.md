@@ -128,8 +128,7 @@ understanding of music.
 
 I also saw how bias creeps in. My catalog was pop-heavy, so pop songs kept winning
 even for users who did not ask for them. Real apps have the same problem: popular
-songs get shown more just because they are common, which pushes smaller artists out
-of view.
+songs get shown more just because they are common, which pushes smaller artists out of view.
 
 
 
